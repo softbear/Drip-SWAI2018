@@ -20,10 +20,11 @@
 * (not sure if right) "background.js" contains definitions for "api" and "isEnableUrl", maybe this is how we can make our extension call the backend 
 
 
+
 ## Issues to solve
 * The screenshot can be saved into the local computer, but we need it to send the image to our server/backend
 * The "popup.html" page closes after completing the screenshot, but we want to display the search results within the "popup.html" page. Perhaps we can get the "popup.html" to become transparent instead of close, when doing the screenshot. If that approach doesn't work, we could open a new tab that receives search results.
-
+* in "popup.html", there is a "results" class. We want to somehow display image from the "/pictures/" directory here when the results have completed
 
 ## License
 
