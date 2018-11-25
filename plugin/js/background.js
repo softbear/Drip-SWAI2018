@@ -134,7 +134,7 @@ var api = {
           break;
         case "captureRegion":
           screenshot.captureRegion();
-          alert("background.js: running screenshot.captureRegion()");
+          //alert("background.js: running screenshot.captureRegion()");
           break;
         case "captureWebcam":
           screenshot.captureWebcam();

@@ -304,6 +304,26 @@ function getFlask() {
 	console.log("cropper.js: getFlask function is working");
 }
 
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+async function injection() {
+  //console.log('Taking a break...');
+  await sleep(2000);
+  //console.log('Two seconds later');
+  		$("body").prepend('<div id="drip-injection" style="position: absolute; z-index: 99999; background: white; right: 10px; top: 10px"> </div>');
+
+
+
+		var img = document.createElement("img");
+		img.src = "http://localhost:5000/static/brown.png";
+
+		var src = document.getElementById("drip-injection");
+		src.appendChild(img);
+
+}
+
 function load_cropper_without_selection(rect) {
 	loadCropper();
 	if (cropperOpen) {
@@ -376,8 +396,20 @@ function load_cropper_without_selection(rect) {
 			console.log(result);
 			return result;
 		});
+
 		//console.log(result);
 		console.log("save button action")
+
+		//removeClip();
+		//removeCrop();
+		//removeClipInstant();
+
+		injection();
+
+
+
+
+
 	});
 
 	$('button.open',$toolbar).on('click',function (){
