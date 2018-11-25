@@ -13,7 +13,7 @@
   "imagesize": { "message": "Image Size:" },
   "openimage": { "message": "Click here to open the image" },
   "open": { "message": "OPEN" },
-  "save": { "message": "SAVE" },
+  "save": { "message": "Capture" },
   "share": { "message": "SHARE" },
   "wait": { "message": "wait" },
   "cancel": { "message": "cancel" },

@@ -310,17 +310,24 @@ function sleep(ms) {
 
 async function injection() {
   //console.log('Taking a break...');
+  //document.getElementById("save.msg").style.visibility="hidden";
+  document.getElementsByClassName("save msg")[0].style.visibility="hidden";
   await sleep(2000);
   //console.log('Two seconds later');
-  		$("body").prepend('<div id="drip-injection" style="position: absolute; z-index: 99999; background: white; right: 10px; top: 10px"> </div>');
+  		$("body").prepend('<div id="drip-injection" style="display:none; position: fixed; z-index: 99999; background: white; right: 10px; top: 10px"> </div>');
 
 
 
 		var img = document.createElement("img");
-		img.src = "http://localhost:5000/static/brown.png";
 
+		img.width = "300";
+
+		img.src = "http://localhost:5000/static/result1.png";
+		//img.src = "http://localhost:5000/static/template.html";
 		var src = document.getElementById("drip-injection");
 		src.appendChild(img);
+		$("#drip-injection").fadeIn("1500");
+		//src.appendChild("http://localhost:5000/static/template.html")
 
 }
 
@@ -345,7 +352,7 @@ function load_cropper_without_selection(rect) {
 	// '<button class="save msg" style="margin:1px;color:black;background-color:white;cursor:pointer;font-size:1em;border: 1px solid #999; border-radius: 4px;padding: 3px 9px;" tag=save></button>' +
 	// '<button class="share msg" tag=share style="margin:1px;color:black;background-color:white;cursor:pointer;font-size:1em;border: 1px solid #999; border-radius: 4px;padding: 3px 9px;"></button></td><td style="border: 0;vertical-align: middle"><div class=realToolbar></div></td></tr></table></div>');
 	var $toolbar = $('<div class=ws-styles><table style="border: 0;"><tr style="border: 0;vertical-align: middle"><td style="border: 0;vertical-align: middle">' +
-	'<button class="save msg" style="margin:1px;color:black;background-color:white;cursor:pointer;font-size:1em;border: 1px solid #999; border-radius: 4px;padding: 3px 9px;" tag=save></button>' +
+	'<button class="save msg" style="margin-top: 25px;color:#f7be33;background-color:white;cursor:pointer;font-size:1em;border: 1px solid #dddddd; border-radius: 15px;padding: 10px 45px 10px 45px;" tag=save></button>' +
 	'</td><td style="border: 0;vertical-align: middle"><div class=realToolbar></div></td></tr></table></div>');
 
 
@@ -356,7 +363,7 @@ function load_cropper_without_selection(rect) {
 	var $realToolbar = $('.realToolbar', $toolbar);
 
 	window.crop.icons = $toolbar;
-	plugins_to_show = defaultPlugins.slice(0,1);
+	plugins_to_show = defaultPlugins.slice(0,0);
 	plugins_to_show = $.grep(plugins_to_show, function(o) {
 		return (
 			// o.key!='openscreenshot' &&
