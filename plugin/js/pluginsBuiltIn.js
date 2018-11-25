@@ -16,7 +16,7 @@ var defaultPlugins = [
 			filename+= '.png' ;
 			var evt = document.createEvent("MouseEvents");evt.initMouseEvent("click", true, true, window,0, 0, 0, 0, 0, false, true, false, false, 0, null);
 			var a=$('<a></a>').appendTo(document.body);
-			a.attr({'href':url,'download':filename})[0].dispatchEvent(evt)
+			//a.attr({'href':url,'download':filename})[0].dispatchEvent(evt)
 		}
 	},
 
