@@ -5,7 +5,21 @@
 * Download chrome-extension directory
 * Go to "chrome://extensions
 * Click "load unpacked extension"
-* Choose the directory you downloaded it to.
+* Choose the directory you downloaded it to (Make sure that "manifest.json" is located in this directory!)
+
+
+## Quick documentation
+"popup.html" is the displayed view when the extension opens
+"popup.html" has a "capture region of screen function", which is defined in:
+"screenshot.js", which calls a function called:
+'load_cropper_without_selection()' within "cropper.js"
+
+"cropper.js" creates a movable rectangle on the screen, and there is a "Save" button that saves the image within the rectangle.
+
+## Issues to solve
+* The screenshot can be saved into the local computer, but we need it to send the image to our server/backend
+* The "popup.html" page closes after completing the screenshot, but we want to display the search results within the "popup.html" page. Perhaps we can get the "popup.html" to become transparent instead of close, when doing the screenshot. If that approach doesn't work, we could open a new tab that receives search results.
+
 
 ## License
 
