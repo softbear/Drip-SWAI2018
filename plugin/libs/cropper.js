@@ -308,6 +308,10 @@ function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
+function hideInjection(){
+	document.getElementById("drip-injection").style.display = "none";
+}
+
 async function injection() {
   //console.log('Taking a break...');
   //document.getElementById("save.msg").style.visibility="hidden";
@@ -321,6 +325,7 @@ async function injection() {
 		var img = document.createElement("img");
 
 		img.width = "300";
+		img.id = "drip-injection-mock"
 
 		img.src = "http://localhost:5000/static/result1.png";
 		//img.src = "http://localhost:5000/static/template.html";
@@ -332,6 +337,7 @@ async function injection() {
 }
 
 function load_cropper_without_selection(rect) {
+	hideInjection();
 	loadCropper();
 	if (cropperOpen) {
 		return ;
@@ -412,7 +418,8 @@ function load_cropper_without_selection(rect) {
 		//removeClipInstant();
 
 		injection();
-
+		//document.getElementById('drip-injection-mock').setAttribute("onclick","hideInjection()")
+		//hideInjection();
 
 
 
