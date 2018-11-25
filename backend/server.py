@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request
 import json
 from flask_cors import CORS
+import time
 app = Flask(__name__, static_url_path='/static')
 #app = Flask(__name__)
 CORS(app)
@@ -51,6 +52,10 @@ def uploader():
                 "url": "https://www.thebay.com/main/ProductDetail.jsp?PRODUCT%3C%3Eprd_id=845524441996652&&site_refer=CSE_GGLPLA&gclid=CjwKCAiAiuTfBRAaEiwA4itUqN5O0njC5ISaS3kaKny355G3CNgE4F_ZMiPQZAPvxLgnvvFhIs4aHhoCupwQAvD_BwE&gclsrc=aw.ds"
             }
         ]
+        print("Upload received...")
+        print("Calculating best mactches...")
+        time.sleep(1)
+        print("Returning results in JSON")
         return json.dumps(meta_dict_1)
 
 
