@@ -1,7 +1,8 @@
 from flask import Flask, render_template, request
 import json
-
+from flask_cors import CORS
 app = Flask(__name__)
+CORS(app)
 
 
 @app.route('/upload')
@@ -12,7 +13,7 @@ def upload_file():
 @app.route('/uploader', methods=['GET', 'POST'])
 def uploader():
     if request.method == 'POST':
-        f = request.files['file']
+        #f = request.files['file']
         # Do sth with the file here, e.g.
         # f.save(secure_filename(f.filename))
         meta_dict_1 = [

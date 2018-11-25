@@ -300,6 +300,9 @@ function loadCropper () {
 		});
 }
 
+function getFlask() {
+	console.log("cropper.js: getFlask function is working");
+}
 
 function load_cropper_without_selection(rect) {
 	loadCropper();
@@ -358,11 +361,23 @@ function load_cropper_without_selection(rect) {
 		})
 	});
 	$('button.save', $toolbar).on('click', function() {
-		//alert("cropper.js: this is a click from save button");
+		//console.log("cropper.js: this is a click from save button");
 		$('[plugin-key=save]').trigger($.Event({
 			type: 'click'
-		}))
-		chrome.tabs.create({url: "newtab.html"});
+		}));
+		var result;
+		fetch("http://localhost:5000/uploader",
+			{method: 'POST',file: "file"})
+		.then(function(response){
+			return response.json();
+		})
+		.then(function(myJson){
+			result=JSON.stringify(myJson);
+			console.log(result);
+			return result;
+		});
+		//console.log(result);
+		console.log("save button action")
 	});
 
 	$('button.open',$toolbar).on('click',function (){

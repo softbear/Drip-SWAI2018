@@ -227,6 +227,8 @@ function editor_obj()
 		//$('#reloadHelper2').unbind().click(function () {addCopyHelper.apply(canvas);});
 		if(todo=='save')
 			{
+			alert("editor.js: todo=save");
+			console.log("editor.js: todo=save");
 			noMoreWait();
 			 if(!!window.webkitIntent && webkitIntent.action=='http://webintents.org/edit')
 				 {
