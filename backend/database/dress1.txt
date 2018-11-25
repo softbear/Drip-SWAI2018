@@ -1,0 +1,3 @@
+retailer: Forever 21
+price: 38.00
+url: https://www.forever21.com/ca/shop/catalog/product/f21/dress/2000290193/02?esvt=2148-GOCAE136250&esvq=&esvadt=999999-0-47968-1&esvcrea=270357890322&esvplace=&esvd=c&esvtg=pla-442111455276&esvo=2000290193024&esvaid=50184&gclid=CjwKCAiAiuTfBRAaEiwA4itUqE1gNQJIhwLRK2LxZGDJAhxrroqBlm3_z-snkfFY1wBn0dRWl32cQhoCxdkQAvD_BwE
