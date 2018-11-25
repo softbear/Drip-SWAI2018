@@ -9,12 +9,16 @@
 
 
 ## Quick documentation
-"popup.html" is the displayed view when the extension opens
-"popup.html" has a "capture region of screen function", which is defined in:
-"screenshot.js", which calls a function called:
-'load_cropper_without_selection()' within "cropper.js"
+* "popup.html" is the displayed view when the extension opens
+* "popup.html" has a "capture region of screen function"
+* "capture region of screen function" is defined in: "screenshot.js"
+* "screenshot.js" calls a function named: 'load_cropper_without_selection()' 
+* 'load_cropper_without_selection()' is located within "cropper.js"
+* "cropper.js" creates a movable rectangle on the screen, and there is a "Save" button that saves the image within the rectangle.
 
-"cropper.js" creates a movable rectangle on the screen, and there is a "Save" button that saves the image within the rectangle.
+* the save location can be change by defining "localStorage" variable in "background.js"
+* (not sure if right) "background.js" contains definitions for "api" and "isEnableUrl", maybe this is how we can make our extension call the backend 
+
 
 ## Issues to solve
 * The screenshot can be saved into the local computer, but we need it to send the image to our server/backend
